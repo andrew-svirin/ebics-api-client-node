@@ -1,0 +1,27 @@
+services:
+  node-ebics-api-client-node:
+    container_name: node-ebics-api-client-node
+    build:
+      context: node
+      args:
+        USER_ID: ${USER_ID-1000}
+        GROUP_ID: ${GROUP_ID-1000}
+    volumes:
+      - ../:/var/www/ebics-api-client-node/
+      - /var/www/ebics-api-client-node/docker
+    extra_hosts:
+      - "ebics-api-client.local:172.17.0.1"
+    tty: true
+    networks:
+      ebics-api-client-node-net:
+        ipv4_address: 172.119.0.6
+
+networks:
+  ebics-api-client-node-net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.119.0.0/24
+    driver_opts:
+      com.docker.network.bridge.name: br_eacn

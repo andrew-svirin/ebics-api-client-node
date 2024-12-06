@@ -1,0 +1,19 @@
+{
+  "name": "ebics-api-client-node",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "nodejs module to utilize EBICS API Client application",
+  "homepage": "https://sites.google.com/view/ebics-api-client",
+  "author": "Andrew Svirin <andrey.svirin@ukr.net>",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [
+    "nodejs",
+    "ebics",
+    "api",
+    "client"
+  ],
+  "scripts": {
+    "test": "node --env-file=./scripts/.env ./scripts/test.js"
+  }
+}
