@@ -14,7 +14,7 @@ build:
 	$(FROM_DC) $(BUILD) --no-cache
 
 start:
-	$(FROM_DC) $(UP)
+	$(FROM_DC) $(UP) -d
 
 stop:
 	$(FROM_DC) $(DOWN)
