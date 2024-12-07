@@ -58,6 +58,39 @@ Keyring with sensitive keys to perform order types methods.
 
 Order type methods to download or upload files to/from the Bank.
 
+| Method                     | Description                                                                                  |
+|----------------------------|----------------------------------------------------------------------------------------------|
+| client.orderType.hev(data) | Order type methods to download or upload files to/from the Bank.                             |
+| client.orderType.ini(data) | Send to the bank public signature of electronic signature.                                   |
+| client.orderType.ini(data) | Send to the bank public signatures of authentication and encryption.                         |
+| client.orderType.hpb(data) | Download the Bank public signatures of authentication and encryption.                        |
+| client.orderType.hpd(data) | Download the bank server parameters.                                                         |
+| client.orderType.hkd(data) | Download customer`s customer and subscriber information.                                     |
+| client.orderType.htd(data) | Download subscriber`s customer and subscriber information.                                   |
+| client.orderType.haa(data) | Download Bank available order types.                                                         |
+| client.orderType.fdl(data) | Download the files from the bank.                                                            |
+| client.orderType.ful(data) | Upload the files to the bank.                                                                |
+| client.orderType.ptk(data) | Download transaction status.                                                                 |
+| client.orderType.vmk(data) | Download the interim transaction report in SWIFT format (MT942).                             |
+| client.orderType.sta(data) | Download the bank account statement.                                                         |
+| client.orderType.c52(data) | Download the bank account report in Camt.052 format.                                         |
+| client.orderType.c53(data) | Download the bank account statement in Camt.053 format.                                      |
+| client.orderType.c54(data) | Download Debit Credit Notification (DTI).                                                    |
+| client.orderType.z52(data) | Download the bank account report in Camt.052 format (i.e Switzerland financial services).    |
+| client.orderType.z53(data) | Download the bank account statement in Camt.053 format (i.e Switzerland financial services). |
+| client.orderType.z54(data) | Download the bank account statement in Camt.054 format (i.e available in Switzerland).       |
+| client.orderType.zsr(data) | Download Order/Payment Status report.                                                        |
+| client.orderType.xek(data) | Download account information as PDF-file.                                                    |
+| client.orderType.cct(data) | Upload initiation of the credit transfer per Single Euro Payments Area.                      |
+| client.orderType.cip(data) | Upload initiation of the instant credit transfer per Single Euro Payments Area.              |
+| client.orderType.xe2(data) | Upload initiation of the Swiss credit transfer (i.e available in Switzerland).               |
+| client.orderType.xe3(data) | Upload SEPA Direct Debit Initiation, CH definitions, CORE (i.e available in Switzerland).    |
+| client.orderType.yct(data) | Upload Credit transfer CGI (SEPA & non SEPA).                                                |
+| client.orderType.cdb(data) | Upload initiation of the direct debit transaction for business.                              |
+| client.orderType.cdd(data) | Upload initiation of the direct debit transaction.                                           |
+| client.orderType.btd(data) | Download request files of any BTF structure.                                                 |
+| client.orderType.btu(data) | Upload the files to the bank.                                                                |
+
 * ## Access Logs
 
 Tracked access logs to Bank for Connections
