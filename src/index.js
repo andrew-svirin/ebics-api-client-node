@@ -9,7 +9,7 @@ class EbicsApiClient {
   connection = {
     // Create connection.
     create: async (data) => {
-      return this._makeRequest(`/api/ebics/connections/create`, 'POST', data);
+      return this._makeRequest('/api/ebics/connections/create', 'POST', data);
     },
 
     // Update connection.
@@ -24,12 +24,44 @@ class EbicsApiClient {
 
     // List od connections.
     list: async () => {
-      return this._makeRequest(`/api/ebics/connections`, 'GET');
+      return this._makeRequest('/api/ebics/connections', 'GET');
     },
 
     // Delete connection.
     delete: async (id) => {
       return this._makeRequest(`/api/ebics/connections/${id}`, 'DELETE');
+    },
+  };
+
+  keyring = {
+    // Generate keyring.
+    generate: async (data) => {
+      return this._makeRequest('/api/ebics/keyring/generate', 'POST', data);
+    },
+
+    // Initialize keyring activation.
+    init: async (data) => {
+      return this._makeRequest('/api/ebics/keyring/init', 'POST', data);
+    },
+
+    // Confirm keyring activation.
+    confirm: async (data) => {
+      return this._makeRequest('/api/ebics/keyring/confirm', 'POST', data);
+    },
+
+    // Suspend keyring activation.
+    suspend: async (data) => {
+      return this._makeRequest('/api/ebics/keyring/suspend', 'POST', data);
+    },
+
+    // Get letter for keyring.
+    letter: async (data) => {
+      return this._makeRequest('/api/ebics/keyring/letter', 'POST', data);
+    },
+
+    // Change secret for keyring.
+    changeSecret: async (data) => {
+      return this._makeRequest('/api/ebics/keyring/change-secret', 'POST', data);
     },
   };
 

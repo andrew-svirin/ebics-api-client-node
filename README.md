@@ -45,6 +45,15 @@ Connections between client application and bank server.
 
 Keyring with sensitive keys to perform order types methods.
 
+| Method                            | Description                                                                                |
+|-----------------------------------|--------------------------------------------------------------------------------------------|
+| client.keyring.generate(data)     | Generate new keyring and encrypt by secret<br/> (Requires before INI and HIA order types). |
+| client.keyring.init(data)         | Initialize keyring (Only before Bank activated connection).                                |
+| client.keyring.confirm(data)      | Confirm keyring (Only after Bank activated connection).                                    |
+| client.keyring.suspend(data)      | Deactivate keyring (SPR order type).                                                       |
+| client.keyring.letter(data)       | Letter should be sent to Bank for Keyring activation.                                      |
+| client.keyring.changeSecret(data) | Change secret for existing Keyring.                                                        |
+
 * ## Order Types
 
 Order type methods to download or upload files to/from the Bank.
