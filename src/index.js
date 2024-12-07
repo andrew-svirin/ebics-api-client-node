@@ -5,7 +5,7 @@ class EbicsApiClient {
     this.apiHost = apiHost;
   }
 
-  // Group: Connection
+  // Connection group.
   connection = {
     // Create connection.
     create: async (data) => {
@@ -33,6 +33,7 @@ class EbicsApiClient {
     },
   };
 
+  // Keyring group.
   keyring = {
     // Generate keyring.
     generate: async (data) => {
@@ -65,6 +66,7 @@ class EbicsApiClient {
     },
   };
 
+  // OrderType group.
   orderType = {
     // HEV Order type.
     hev: async (data) => {
@@ -214,6 +216,27 @@ class EbicsApiClient {
     // BTU Order type.
     btu: async (data) => {
       return this._makeRequest('/api/ebics/order-types/btu', 'POST', data);
+    },
+  };
+
+  // AccessLog group.
+  accessLog = {
+    // Get logs.
+    list: async () => {
+      return this._makeRequest('/api/ebics/logs', 'GET');
+    },
+  };
+
+  // FetchedFile group.
+  fetchedFile = {
+    // Get fetched files.
+    list: async () => {
+      return this._makeRequest('/api/ebics/fetched-files', 'GET');
+    },
+
+    // Download fetched file.
+    download: async (id) => {
+      return this._makeRequest(`/api/ebics/fetched-files/${id}/download`, 'GET');
     },
   };
 

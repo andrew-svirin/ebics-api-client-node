@@ -17,6 +17,10 @@ EBICS Client can be deployed as a standalone service on a webserver or within a 
 
 <br clear="left"/>
 
+# Installation
+
+`npm install ebics-api-client-node`
+
 # Usage
 
 ```js
@@ -95,6 +99,15 @@ Order type methods to download or upload files to/from the Bank.
 
 Tracked access logs to Bank for Connections
 
+| Method                  | Description               |
+|-------------------------|---------------------------|
+| client.accessLog.list() | Access logs to the Banks. |
+
 * ## Fetched files
 
 Fetched files by run Scheduler Jobs
+
+| Method                          | Description                                                    |
+|---------------------------------|----------------------------------------------------------------|
+| client.fetchedFile.list()       | Fetched files of run scheduler order transactions to the Bank. |
+| client.fetchedFile.download(id) | Download fetched file content.                                 |
