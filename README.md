@@ -66,7 +66,7 @@ Order type methods to download or upload files to/from the Bank.
 |----------------------------|----------------------------------------------------------------------------------------------|
 | client.orderType.hev(data) | Order type methods to download or upload files to/from the Bank.                             |
 | client.orderType.ini(data) | Send to the bank public signature of electronic signature.                                   |
-| client.orderType.ini(data) | Send to the bank public signatures of authentication and encryption.                         |
+| client.orderType.hia(data) | Send to the bank public signatures of authentication and encryption.                         |
 | client.orderType.hpb(data) | Download the Bank public signatures of authentication and encryption.                        |
 | client.orderType.hpd(data) | Download the bank server parameters.                                                         |
 | client.orderType.hkd(data) | Download customer`s customer and subscriber information.                                     |

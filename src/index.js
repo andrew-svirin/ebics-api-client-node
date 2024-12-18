@@ -22,7 +22,7 @@ class EbicsApiClient {
       return this._makeRequest(`/api/ebics/connections/${id}`, 'GET');
     },
 
-    // List od connections.
+    // List of connections.
     list: async () => {
       return this._makeRequest('/api/ebics/connections', 'GET');
     },
